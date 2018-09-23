@@ -1,5 +1,5 @@
 param(
-    $TerraformVarsFile = "..\..\terraform.tfvars"
+    $TerraformVarsFile = "~/.aws/awscreds.tfvars"
 )
 #Get the AWS keys
 $content = Get-Content $TerraformVarsFile
