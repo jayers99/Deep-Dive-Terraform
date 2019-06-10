@@ -1,3 +1,7 @@
+# create an unmanaged resoure for the import examplee
+# i gave up on this running on my macbook
+
+
 param(
     $TerraformVarsFile = "~/.aws/awscreds.tfvars"
 )
@@ -11,9 +15,11 @@ foreach($line in $content){
 }
 
 #Install the AWS PowerShell if you don't already have it
-if(-not (Get-Module AWSPowerShell -ErrorAction SilentlyContinue)){
-    Install-Module AWSPowerShell -Force
+if(-not (Get-Module AWSPowerShell.NetCore -ErrorAction SilentlyContinue)){
+    Install-Module AWSPowerShell.NetCore -Force
 }
+#for some reason my setup does not have this module imported
+Import-Module -Name AWSPowerShell.NetCore
 
 #Set the AWS Credentials
 Set-AWSCredential -SecretKey $values.aws_secret_key.Replace('"','') `

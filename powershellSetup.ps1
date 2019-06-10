@@ -1,3 +1,14 @@
+# install powershell
+# im not finding a brew powershell packageS
+brew list powershell
+brew cask install powershell
+# verify with this
+pwsh
+brew update
+# this errored out on my install i must have not used brew
+brew cask upgrade powershell
+
+
 # on macOS
 # non windows hosts can only run the netcore module
 # install powershell core

@@ -1,0 +1,2 @@
+skipping the module to much trouble getting the aws powershell to run on my mac
+
